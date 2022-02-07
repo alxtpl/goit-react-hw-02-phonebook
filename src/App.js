@@ -1,5 +1,8 @@
-import { Component } from 'react/cjs/react.production.min';
+import { Component } from 'react';
+import ContactForm from "./Components/ContactForm/ContactForm.jsx";
+
 import './App.css';
+;
 
 class App extends Component {
   state = {
@@ -13,39 +16,13 @@ class App extends Component {
     name: '',
     number: '',
   };
-  deleteItem = id =>
-    this.setState(prev => ({
-      contacts: prev.contacts.filter(el => el.id !== id),
-    }));
+ 
 
   render() {
     return (
       <div>
         <h1>Phonebook</h1>
-        <form onSubmit="">
-          <label>
-            <p>Name</p>
-            <input
-              type="text"
-              name="name"
-              pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-              title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-              required
-              value=""
-              onChange=""
-            />
-            <input
-              type="tel"
-              name="number"
-              pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
-              title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-              required
-              value=""
-              onChange=""
-            />
-          </label>
-          <button>Add contact</button>
-        </form>
+        <ContactForm onSubmit="" />
         <h2>Contacts</h2>
         <input type="text" name="filter" value="" onChange="" />
         <ul>
