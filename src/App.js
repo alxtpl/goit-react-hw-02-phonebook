@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import ContactForm from "./Components/ContactForm/ContactForm.jsx";
+import ContactList from "./Components/ContactList/ContactList.jsx";
 
 import './App.css';
 ;
@@ -23,14 +24,8 @@ class App extends Component {
       <div>
         <h1>Phonebook</h1>
         <ContactForm onSubmit="" />
-        <h2>Contacts</h2>
-        <input type="text" name="filter" value="" onChange="" />
-        <ul>
-          <li>
-            <span>name&number</span>
-        <button type='button' onClick="">Delete</button>
-          </li>
-        </ul>
+        <ContactList onSubmit="" />
+       
 
       </div>
     );
